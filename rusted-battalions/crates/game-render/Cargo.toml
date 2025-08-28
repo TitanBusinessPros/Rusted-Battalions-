@@ -1,0 +1,34 @@
+[package]
+name = "rusted-battalions-game-render"
+version = "0.1.0"
+description = "Game renderer for Rusted Battalions"
+authors = ["Pauan <pauanyu+github@pm.me>"]
+categories = ["wasm"]
+readme = "README.md"
+license = "MIT"
+edition = "2021"
+
+[features]
+webgl = ["rusted-battalions-engine/webgl"]
+unicode = ["rusted-battalions-engine/unicode"]
+
+[dependencies]
+js-sys = "0.3.64"
+futures-signals = "0.3.32"
+futures = "0.3.28"
+slab = "0.4.9"
+dominator = "0.5.18"
+log = "0.4.20"
+
+[dependencies.image]
+version = "0.25.5"
+default-features = false
+features = [
+    "png",
+]
+
+[dependencies.rusted-battalions-engine]
+path = "../engine"
+
+#[dependencies.rusted-battalions-game-logic]
+#path = "../game-logic"
